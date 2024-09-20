@@ -1,0 +1,2 @@
+CREATE TABLE games (id int not null auto_increment, gameName varchar (255) not null, gameDev varchar (255) not null, PRIMARY KEY (id));
+CREATE TABLE gamesGenre (gameID int not null, genreName varchar (255) not null, PRIMARY KEY (gameID, genreName), foregin key (gameID) references games(id));
